@@ -27,7 +27,7 @@ int main() {
 
     std::cout << "Read " << lines_read << " lines" << std::endl;
 */
-    string url_str = "https://www.gutenberg.org/cache/epub/11/pg11.txt";
+    string url_str = "https://www.gutenberg.org/files/73988/73988-0.txt";
 	std::string file_output_name = "downloaded_file.txt";
 	if (vix::curl_download(file_output_name, url_str)) {
 		std::cout<<"File "<<file_output_name<<" was downloaded!"<<std::endl;
@@ -41,10 +41,14 @@ int main() {
     cin >> src;
     cout << "Enter target file name: ";
     cin >> dest;
+
     int shift=3; //sets shift value
     int option = 1; // 1 to decode 0 to encode
+
     int lines_read = 0;
     lines_read = arya::encode_to_file(dest, src, shift);
+
+
 
 
     return 0;
