@@ -2,6 +2,7 @@
 #include "curl_downloader_alt.hpp"
 #include "hash_cpp.h"
 #include <iostream>
+#include "password.hpp"
 using namespace std;
 
 int main() {
@@ -48,6 +49,8 @@ int main() {
     int lines_read = 0;
     lines_read = arya::encode_to_file(dest, src, shift);
 
+    string *password = "password";
+    cout << password::encrypt_password(password) << endl;
 
 
 
