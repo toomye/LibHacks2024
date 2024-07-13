@@ -36,27 +36,31 @@ int main() {
 	}
 
     
-    string src, dest;
+    string src, dest,dest2;
     cout << "Enter source file name: ";
     cin >> src;
     cout << "Enter target file name: ";
     cin >> dest;
 
     int shift=3; //sets shift value
-    int option = 1; // 1 to decode 0 to encode
+   
 
     int lines_read = 0;
     lines_read = arya::encode_to_file(dest, src, shift);
 
     uint64_t password = 15995394761627643730;
-
-    string attempt = "tyler";
+    cout <<"Enter password to decrypt"<<std::endl;
+    string attempt;
+    cin >> attempt;
+    
     if (GENHASH(attempt.c_str()) != password) {
         cout << "INCORRECT PASSWORD" << endl;        
     }
-
-
-
+    else {
+    cout <<"Enter destination"<<std::endl;
+    cin >> dest2;
+    lines_read = arya::decode_to_file(dest2, src, shift);
+    }
 
 
     return 0;
