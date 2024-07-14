@@ -8,7 +8,7 @@ int main() {
     
     
 /*
-    string src, dest;
+    string src, dest;   
     int shift=3; //sets shift value
     int option = 1; // 1 to decode 0 to encode
     
@@ -65,4 +65,5 @@ int main() {
 
     return 0;
 }
-
+// Downloads txt file online, is then encrypted using caesar cypher. Created a hashed password - libhacks
+// if password correctly entered, decrypts message 
