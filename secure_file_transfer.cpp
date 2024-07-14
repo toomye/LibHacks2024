@@ -59,7 +59,7 @@ int main() {
     else {
     cout <<"Enter destination"<<std::endl;
     cin >> dest2;
-    lines_read = arya::decode_to_file(dest2, src, shift);
+    lines_read = arya::decode_to_file(dest2, dest, shift);
     }
 
 
